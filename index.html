@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111411">
+<meta name="description" content="Professional thermal imaging inspections for homes, buildings, electrical systems and moisture issues. Book a certified thermographer.">
+<title>Thermal Insight | See beyond the surface</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;
+500;
+600;
+700&family=Manrope:wght@400;
+500;
+600;
+700;
+800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#171a16;
+--muted:#6b7069;
+--paper:#f7f7f2;
+--white:#fff;
+--lime:#c5f36a;
+--line:#e7e9e1;
+--red:#ff604e;
+--r:24px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;
+background:var(--paper);
+color:var(--ink);
+font-family:'DM Sans',sans-serif;
+font-size:15px;
+-webkit-font-smoothing:antialiased}
+a{color:inherit;
+text-decoration:none}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(1160px,calc(100% - 48px));
+margin:auto}
+.nav{height:82px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-bottom:1px solid var(--line)}
+.brand{display:flex;
+align-items:center;
+gap:10px;
+font:800 18px Manrope,sans-serif;
+letter-spacing:-.8px}
+.brand-icon{display:grid;
+place-items:center;
+width:34px;
+height:34px;
+background:var(--lime);
+border-radius:11px;
+font-size:19px}
+.navlinks{display:flex;
+gap:32px;
+color:#5e625a;
+font-size:13px}
+.navright{display:flex;
+align-items:center;
+gap:20px}
+.phone{font-weight:700;
+font-size:13px}
+.btn{border:0;
+display:inline-flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+padding:14px 20px;
+border-radius:999px;
+background:var(--ink);
+color:white;
+font-size:13px;
+font-weight:700;
+cursor:pointer;
+transition:.2s}
+.btn:hover{transform:translateY(-2px);
+background:#343a2c}
+.btn.lime{background:var(--lime);
+color:var(--ink)}
+.btn.lime:hover{background:#b4e750}
+.btn.outline{background:transparent;
+color:var(--ink);
+border:1px solid #ccd0c5}
+.hero{display:grid;
+grid-template-columns:1fr .88fr;
+gap:72px;
+align-items:center;
+padding:74px 0 82px}
+.eyebrow{display:inline-flex;
+align-items:center;
+gap:8px;
+text-transform:uppercase;
+font-weight:700;
+font-size:10px;
+letter-spacing:1.6px;
+color:#777e70}
+.dot{width:7px;
+height:7px;
+border-radius:50%;
+background:#8db637;
+box-shadow:0 0 0 4px #e6f3cf}
+.hero h1{font:700 clamp(42px,5.4vw,68px)/1.06 Manrope,sans-serif;
+letter-spacing:-3.6px;
+margin:22px 0 20px;
+max-width:620px}
+.hero h1 em{font-style:normal;
+color:#749a37}
+.lead{color:var(--muted);
+font-size:16px;
+line-height:1.8;
+max-width:490px}
+.actions{display:flex;
+gap:11px;
+margin:29px 0}
+.trust{display:flex;
+align-items:center;
+gap:13px;
+color:#6b7069;
+font-size:12px}
+.stars{color:#efaa37;
+letter-spacing:2px;
+font-size:15px}
+.trust strong{color:var(--ink)}
+.hero-art{position:relative;
+min-height:440px;
+border-radius:30px;
+background:#161914;
+overflow:hidden;
+padding:28px;
+color:white}
+.art-glow{position:absolute;
+inset:0;
+background:radial-gradient(ellipse at 68% 43%,#425625 0%,#252b20 31%,#151813 72%)}
+.scan-grid{position:absolute;
+inset:0;
+background-image:linear-gradient(#ffffff09 1px,transparent 1px),linear-gradient(90deg,#ffffff09 1px,transparent 1px);
+background-size:36px 36px;
+mask-image:linear-gradient(90deg,transparent,#000)}
+.art-top{position:relative;
+display:flex;
+justify-content:space-between;
+color:#dce3d3;
+font-size:10px;
+letter-spacing:1px;
+text-transform:uppercase}
+.live{color:#b8f179;
+display:flex;
+align-items:center;
+gap:7px}
+.live:before{content:'';
+width:6px;
+height:6px;
+border-radius:50%;
+background:#b8f179}
+.thermal{position:absolute;
+width:74%;
+height:62%;
+top:20%;
+left:14%;
+border:1px solid #ffffff21;
+border-radius:18px;
+background:linear-gradient(142deg,#1720a2 0%,#0967cf 22%,#12c2c1 39%,#a6e351 55%,#ffd42b 69%,#fa6325 82%,#bd152d 100%);
+overflow:hidden;
+transform:rotate(-5deg);
+box-shadow:0 28px 90px #0009}
+.thermal:before{content:'';
+position:absolute;
+width:56%;
+height:92%;
+right:9%;
+top:-5%;
+border-radius:50% 50% 20% 20%;
+background:radial-gradient(ellipse at 50% 38%,#fff68a 0%,#ffe02e 14%,#fd8a1d 36%,#e54034 59%,#7531a0 100%);
+filter:blur(3px)}
+.thermal:after{content:'';
+position:absolute;
+width:31%;
+height:62%;
+left:4%;
+bottom:-13%;
+border-radius:50% 50% 0 0;
+background:radial-gradient(ellipse at 50% 40%,#e2ff77,#82dd50 26%,#22a4c5 64%,#252fb2 90%)}
+.scan-cross{position:absolute;
+z-index:2;
+width:72px;
+height:72px;
+border:1px solid #ffffff91;
+left:45%;
+top:39%}
+.scan-cross:before,.scan-cross:after{content:'';
+position:absolute;
+background:#ffffff76}
+.scan-cross:before{height:1px;
+width:100%;
+top:50%}
+.scan-cross:after{height:100%;
+width:1px;
+left:50%}
+.readout{position:absolute;
+bottom:25px;
+left:27px;
+right:27px;
+display:flex;
+justify-content:space-between;
+align-items:end}
+.readout small{display:block;
+color:#b1b8aa;
+font-size:9px;
+letter-spacing:1px;
+text-transform:uppercase;
+margin-bottom:7px}
+.temp{font:700 27px Manrope}
+.range{color:#c5f36a;
+font-size:12px}
+.chip{border:1px solid #ffffff35;
+padding:9px 12px;
+border-radius:12px;
+color:#e5eadf;
+font-size:10px}
+.float-note{position:absolute;
+z-index:4;
+background:#fff;
+color:var(--ink);
+padding:14px 16px;
+border-radius:14px;
+box-shadow:0 12px 35px #0003;
+font-size:11px;
+right:-3px;
+top:48%}
+.float-note strong{display:block;
+font:700 14px Manrope;
+margin-bottom:4px}
+.sections{padding:25px 0 80px}
+.proof{display:flex;
+align-items:center;
+justify-content:space-between;
+padding:24px 30px;
+background:#fff;
+border:1px solid var(--line);
+border-radius:18px}
+.proof-label{font-size:10px;
+color:#858a80;
+text-transform:uppercase;
+letter-spacing:1.3px;
+max-width:150px;
+line-height:1.6}
+.proof-item{font-weight:700;
+font:700 13px Manrope;
+display:flex;
+align-items:center;
+gap:10px}
+.proof-item span{font-size:18px}
+.section-head{text-align:center;
+margin:104px auto 42px;
+max-width:590px}
+.section-head h2{font:700 40px/1.15 Manrope;
+letter-spacing:-1.8px;
+margin:16px 0}
+.section-head p{color:var(--muted);
+line-height:1.7;
+margin:0}
+.cards{display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px}
+.card{background:white;
+border:1px solid var(--line);
+border-radius:20px;
+padding:26px;
+min-height:220px}
+.icon{width:42px;
+height:42px;
+display:grid;
+place-items:center;
+border-radius:13px;
+background:#eff6e1;
+font-size:20px}
+.card h3{font:700 18px Manrope;
+margin:22px 0 9px}
+.card p{color:var(--muted);
+font-size:13px;
+line-height:1.7;
+margin:0}
+.process{display:grid;
+grid-template-columns:.9fr 1.1fr;
+align-items:center;
+gap:80px;
+margin-top:104px;
+padding:54px;
+border-radius:28px;
+background:#1a1e18;
+color:white}
+.process h2{font:700 37px/1.2 Manrope;
+letter-spacing:-1.7px;
+margin:14px 0}
+.process p{color:#b9bdb4;
+line-height:1.75;
+font-size:13px}
+.steps{display:grid;
+gap:10px}
+.step{display:flex;
+gap:17px;
+align-items:flex-start;
+padding:17px;
+background:#ffffff09;
+border:1px solid #ffffff13;
+border-radius:15px}
+.step-num{flex:0 0 29px;
+height:29px;
+border-radius:50%;
+display:grid;
+place-items:center;
+background:#c5f36a;
+color:#1a1e18;
+font-weight:700;
+font-size:11px}
+.step h3{font:700 14px Manrope;
+margin:2px 0 6px}
+.step p{margin:0;
+font-size:12px}
+.faq{max-width:760px;
+margin:0 auto}
+.faq details{border-bottom:1px solid var(--line);
+padding:19px 2px}
+.faq summary{font:700 14px Manrope;
+cursor:pointer;
+list-style:none;
+display:flex;
+justify-content:space-between}
+.faq summary:after{content:'+';
+color:#749a37;
+font-size:20px}
+.faq details[open] summary:after{content:'−'}
+.faq details p{color:var(--muted);
+font-size:13px;
+line-height:1.75;
+max-width:650px}
+.cta{display:flex;
+justify-content:space-between;
+align-items:center;
+gap:30px;
+margin:95px 0 58px;
+padding:45px 48px;
+background:var(--lime);
+border-radius:24px}
+.cta h2{font:700 29px Manrope;
+letter-spacing:-1px;
+margin:0 0 9px}
+.cta p{color:#455230;
+font-size:13px;
+margin:0}
+.cta .btn{background:var(--ink);
+white-space:nowrap}
+.footer{padding:26px 0 38px;
+border-top:1px solid var(--line);
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:#777d72;
+font-size:11px}
+.footer-links{display:flex;
+gap:20px}
+.modal{position:fixed;
+inset:0;
+background:#111a;
+display:none;
+place-items:center;
+padding:20px;
+z-index:10}
+.modal.show{display:grid}
+.dialog{position:relative;
+width:min(480px,100%);
+background:var(--paper);
+border-radius:23px;
+padding:31px}
+.close{position:absolute;
+right:20px;
+top:17px;
+background:none;
+border:0;
+font-size:24px;
+cursor:pointer}
+.dialog h2{font:700 25px Manrope;
+letter-spacing:-1px;
+margin:0 0 7px}
+.dialog>p{color:var(--muted);
+font-size:13px;
+margin:0 0 22px}
+.field{display:grid;
+gap:7px;
+margin:13px 0}
+.field label{font-size:11px;
+font-weight:700}
+.field input,.field select,.field textarea{width:100%;
+border:1px solid #dfe1d8;
+border-radius:11px;
+background:#fff;
+padding:12px 13px;
+outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#8dae52}
+.field textarea{resize:vertical;
+min-height:78px}
+.dialog .btn{width:100%;
+margin-top:9px}
+.fine{font-size:10px;
+color:#81867c;
+text-align:center;
+margin-top:10px}
+
+@media(max-width:850px){.navlinks{display:none}
+.hero{gap:28px;
+padding:55px 0 65px;
+grid-template-columns:1fr .85fr}
+.hero-art{min-height:365px}
+.float-note{right:7px}
+.proof{flex-wrap:wrap;
+gap:20px}
+.process{gap:32px;
+padding:36px}
+.section-head{margin-top:80px}
+}
+
+@media(max-width:620px){.wrap{width:min(100% - 34px,440px)}
+.nav{height:69px}
+.navright .phone{display:none}
+.navright .btn{padding:11px 15px;
+font-size:11px}
+.hero{grid-template-columns:1fr;
+gap:35px;
+padding:49px 0 52px}
+.hero h1{font-size:47px;
+letter-spacing:-2.7px;
+margin:18px 0 15px}
+.lead{font-size:14px}
+.hero-art{min-height:365px}
+.proof{justify-content:flex-start;
+padding:20px;
+gap:19px 24px}
+.proof-label{flex-basis:100%;
+max-width:none}
+.proof-item{font-size:11px}
+.sections{padding-bottom:45px}
+.section-head{margin:72px auto 28px}
+.section-head h2{font-size:33px}
+.cards{grid-template-columns:1fr;
+gap:11px}
+.card{min-height:unset;
+padding:22px}
+.card h3{margin:15px 0 7px}
+.process{grid-template-columns:1fr;
+padding:27px 21px;
+margin-top:70px;
+gap:22px}
+.process h2{font-size:32px}
+.cta{display:block;
+margin:70px 0 42px;
+padding:30px 24px}
+.cta h2{font-size:25px}
+.cta .btn{margin-top:20px}
+.footer{align-items:flex-start;
+gap:16px;
+flex-direction:column}
+.footer-links{flex-wrap:wrap}
+.actions .btn{padding:13px 16px;
+font-size:11px}
+}
+
+.call-float{position:fixed;
+z-index:9;
+right:28px;
+bottom:28px;
+display:flex;
+align-items:center;
+gap:10px;
+padding:15px 22px;
+border-radius:999px;
+background:var(--red);
+color:#fff;
+font-size:14px;
+font-weight:700;
+box-shadow:0 13px 30px #80221855;
+opacity:0;
+pointer-events:none;
+transform:translateY(18px);
+transition:opacity .25s,transform .25s}
+.call-float:before{content:'☎';
+font-size:16px}
+.call-float.visible{opacity:1;
+pointer-events:auto;
+transform:translateY(0);
+animation:call-pulse 1.25s ease-in-out infinite}
+@keyframes call-pulse{0%,100%{box-shadow:0 13px 30px #80221855;
+transform:translateY(0) scale(1)}
+50%{box-shadow:0 0 0 10px #ff604e33,0 13px 30px #80221855;
+transform:translateY(0) scale(1.035)}
+}
+.call-float:hover{background:#e64b3b}
+@media(max-width:620px){.call-float{right:17px;
+bottom:17px;
+padding:13px 18px;
+font-size:13px}
+}
+
+</style>
+</head>
+<body>
+<header class="wrap nav">
+<a class="brand" href="#top">
+<span class="brand-icon">⌁</span> thermal<span style="font-weight:500">insight</span>
+</a>
+<nav class="navlinks">
+<a href="#services">Services</a>
+<a href="#process">How it works</a>
+<a href="#faq">FAQ</a>
+</nav>
+<div class="navright">
+<a class="phone" href="tel:+918296990159">82969 90159</a>
+<button class="btn" data-book>Book an inspection <span>↗</span>
+</button>
+</div>
+</header>
+<main id="top">
+<section class="wrap hero">
+<div>
+<span class="eyebrow">
+<i class="dot">
+</i> Find the unseen. Fix with confidence.</span>
+<h1>See beyond the surface with <em>thermal imaging.</em>
+</h1>
+<p class="lead">Pinpoint hidden moisture, energy loss, and electrical hot spots—before they become expensive problems. Clear answers from a certified thermal inspection.</p>
+<div class="actions">
+<a class="btn lime" href="tel:+918296990159">Call now <span>↗</span>
+</a>
+<a class="btn outline" href="#services">Explore services</a>
+</div>
+<div class="trust">
+<span class="stars">★★★★★</span>
+<span>
+<strong>4.9/5</strong> from 240+ happy clients</span>
+</div>
+</div>
+<div class="hero-art">
+<div class="art-glow">
+</div>
+<div class="scan-grid">
+</div>
+<div class="art-top">
+<span>Thermal capture · Live view</span>
+<span class="live">Active scan</span>
+</div>
+<div class="thermal">
+</div>
+<div class="scan-cross">
+</div>
+<div class="float-note">
+<strong>Temperature anomaly</strong>Potential moisture detected</div>
+<div class="readout">
+<div>
+<small>Surface temperature</small>
+<span class="temp">24.8°</span>
+<span class="range"> +3.2°</span>
+</div>
+<span class="chip">IR · 320 × 240</span>
+</div>
+</div>
+</section>
+<section class="wrap sections">
+<div class="proof">
+<div class="proof-label">Your peace of mind<br>is built into every scan</div>
+<div class="proof-item">
+<span>✳</span> Certified thermographers</div>
+<div class="proof-item">
+<span>◷</span> Reports in 24 hours</div>
+<div class="proof-item">
+<span>✓</span> No-invasive inspections</div>
+</div>
+<div class="section-head" id="services">
+<span class="eyebrow">See the whole picture</span>
+<h2>Small signals. <br>Big peace of mind.</h2>
+<p>Thermal imaging helps you make informed decisions about your property, without opening up walls or guessing at the cause.</p>
+</div>
+<div class="cards">
+<article class="card">
+<span class="icon">⌂</span>
+<h3>Home & building</h3>
+<p>Identify insulation gaps, air leaks, roof concerns and hidden moisture in homes and commercial properties.</p>
+</article>
+<article class="card">
+<span class="icon">ϟ</span>
+<h3>Electrical systems</h3>
+<p>Spot overheating connections and uneven loads early—so maintenance can happen before equipment fails.</p>
+</article>
+<article class="card">
+<span class="icon">◉</span>
+<h3>Moisture & leak detection</h3>
+<p>Trace temperature patterns that may reveal hidden leaks, dampness and potential mold risk.</p>
+</article>
+</div>
+<section class="process" id="process">
+<div>
+<span class="eyebrow" style="color:#c5f36a">Straightforward from start to finish</span>
+<h2>From first scan to clear next steps.</h2>
+<p>We’ll walk you through what we find in plain language, with a report you can act on—not a folder full of confusing images.</p>
+<a class="btn lime" data-book href="javascript:void(0)">Book your inspection ↗</a>
+</div>
+<div class="steps">
+<article class="step">
+<span class="step-num">01</span>
+<div>
+<h3>Tell us what’s going on</h3>
+<p>Share the property type, your concerns, and a time that works.</p>
+</div>
+</article>
+<article class="step">
+<span class="step-num">02</span>
+<div>
+<h3>We scan, you stay informed</h3>
+<p>A trained inspector checks the areas that matter—non-invasively.</p>
+</div>
+</article>
+<article class="step">
+<span class="step-num">03</span>
+<div>
+<h3>Get your report & recommendations</h3>
+<p>Receive annotated images, findings, and practical next steps.</p>
+</div>
+</article>
+</div>
+</section>
+<div class="section-head" id="faq">
+<span class="eyebrow">Good to know</span>
+<h2>Questions, answered.</h2>
+<p>Here are a few things people ask before booking their first thermal inspection.</p>
+</div>
+<div class="faq">
+<details>
+<summary>What can a thermal inspection tell me?</summary>
+<p>Thermal cameras show surface temperature differences. Those patterns can point to concerns such as moisture, air leakage, insulation gaps, or overheating electrical components. Follow-up investigation may be needed to confirm the cause.</p>
+</details>
+<details>
+<summary>Is the inspection invasive?</summary>
+<p>No. The camera reads infrared energy from surfaces;
+ it does not see through walls or require us to open them. We scan accessible areas and explain any limitations in your report.</p>
+</details>
+<details>
+<summary>How long does an inspection take?</summary>
+<p>Most residential visits take around 60–90 minutes, depending on property size and the areas you’d like us to check. We’ll confirm timing when we learn more about your project.</p>
+</details>
+<details>
+<summary>When will I get my report?</summary>
+<p>We aim to deliver a clear, annotated report within 24 hours after the site visit.</p>
+</details>
+<details>
+<summary>Can thermal imaging find every leak or defect?</summary>
+<p>No inspection method can find every issue under all conditions. Results depend on temperature differences, access, weather, and other site conditions. We explain what the images show and recommend further evaluation where appropriate.</p>
+</details>
+</div>
+<div class="cta">
+<div>
+<h2>Ready to see what’s really going on?</h2>
+<p>Get answers you can act on. Tell us what you’re noticing and we’ll take it from there.</p>
+</div>
+<button class="btn" data-book>Request an inspection <span>↗</span>
+</button>
+</div>
+</section>
+</main>
+<a class="call-float" id="floatingCall" href="tel:+918296990159" aria-label="Call Thermal Insight now">Call now</a>
+<script>const floatingCall=document.querySelector('#floatingCall');
+window.addEventListener('scroll',()=>floatingCall.classList.toggle('visible',window.scrollY>180),{passive:true}
+);
+</script>
+<footer class="wrap footer">
+<a class="brand" href="#top">
+<span class="brand-icon">⌁</span> thermal<span style="font-weight:500">insight</span>
+</a>
+<span>© <span id="year">
+</span> Thermal Insight. All rights reserved.</span>
+<div class="footer-links">
+<a href="tel:+918296990159">82969 90159</a>
+<a href="mailto:moulikrishna0159@gmail.com">moulikrishna0159@gmail.com</a>
+</div>
+</footer>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+<form class="dialog" id="booking">
+<button type="button" class="close" aria-label="Close">×</button>
+<h2 id="dialogTitle">Request an inspection</h2>
+<p>Tell us a little about your project. We’ll be in touch to confirm a time.</p>
+<div class="field">
+<label for="name">Your name</label>
+<input id="name" name="name" placeholder="Jane Smith" required>
+</div>
+<div class="field">
+<label for="email">Email</label>
+<input id="email" name="email" type="email" placeholder="jane@example.com" required>
+</div>
+<div class="field">
+<label for="service">What would you like inspected?</label>
+<select id="service" name="service">
+<option>Home or building</option>
+<option>Electrical system</option>
+<option>Moisture or leak concern</option>
+<option>Something else</option>
+</select>
+</div>
+<div class="field">
+<label for="details">Anything we should know? <span style="font-weight:400;
+color:#858a80">(optional)</span>
+</label>
+<textarea id="details" name="details" placeholder="Describe what you've noticed...">
+</textarea>
+</div>
+<button class="btn lime" type="submit">Send inspection request ↗</button>
+<div class="fine">Your email app will open with your request ready to send.</div>
+</form>
+</div>
+<script>const modal=document.querySelector('#modal');
+document.querySelectorAll('[data-book]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();
+modal.classList.add('show');
+document.querySelector('#name').focus()}
+));
+document.querySelector('.close').onclick=()=>modal.classList.remove('show');
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show')}
+);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('show')}
+);
+document.querySelector('#booking').addEventListener('submit',e=>{e.preventDefault();
+const d=new FormData(e.currentTarget);
+const body=`Name: ${d.get('name')}
+\nEmail: ${d.get('email')}
+\nService: ${d.get('service')}
+\nDetails: ${d.get('details')||'None provided'}
+`;
+location.href=`mailto:moulikrishna0159@gmail.com?subject=${encodeURIComponent('Thermal inspection request')}
+&body=${encodeURIComponent(body)}
+`}
+);
+document.querySelector('#year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
+
+
